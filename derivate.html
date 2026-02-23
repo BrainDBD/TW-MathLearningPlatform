@@ -1,0 +1,778 @@
+<!DOCTYPE html> 
+<html lang=“ro”>
+<head> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derivate & Integrale</title>
+<link href="stil.css" type="text/css" rel="stylesheet">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <article>
+        <section>
+            <nav>
+                <ul class="meniu">
+                    <li><a href="main.html">Acasă</a></li>
+                    <li><a href="#lectii">Lecții</a>
+                        <ul class="submeniu">
+                            <li><a href="legi.html">Legi de Compoziție</a></li>
+                            <!--<li><a href="polinoame.html">Polinoame</a></li> -->
+                            <li><a href="geometrie.html">Geometrie</a></li>
+                            <li><a href="trigonometrie.html">Trigonometrie</a></li>
+                            <li><a href="derivate.html">Derivate & Integrale</a></li>
+                        </ul>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="quiz.html">Teste</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+        </section>
+    </article>
+    <h2 class = "important"> Derivate </h2>
+    <p class = "italics">
+        Definiție: Derivata unei funcții este unul dintre conceptele fundamentale ale analizei matematice, împreună cu primitiva (inversa derivatei, adică integrala).
+    </p>
+    <p class = "italics">
+        Condiție: Pentru ca o funcție să fie derivabilă, &#8707;<math>
+            <munder>
+                <mo>lim</mo>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>→</mo>
+                    <msub>
+                        <mn>x</mn>
+                        <mn>0</mn>
+                    </msub>
+                </mrow>
+            </munder>
+            <mfrac>
+                <mrow>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    <mo>-</mo>
+                    <mi>f</mi>
+                    <mo>(</mo>
+                    <msub>
+                      <mn>x</mn>
+                      <mn>0</mn>
+                    </msub>
+                    <mo>)</mo>
+                </mrow>
+                <mrow>
+                    <mi>x</mi>
+                    <mo>-</mo>
+                    <msub>
+                        <mn>x</mn>
+                        <mn>0</mn>
+                    </msub>
+                </mrow>
+            </mfrac>
+        </math>
+        = L &#8712; &#8477;. În caz afirmativ L=f'(x).
+    </p>
+    <h3> Tabel Derivate</h3>
+    <table>
+        <tr>
+            <th>x</th>
+            <th>c</th>
+            <th>xⁿ</th>
+            <th>
+            <math>
+                <msqrt>
+                <mrow>
+                    <mi>x</mi>
+                </mrow>
+                </msqrt>
+            </math>
+            </th>
+            <th>1&#x2044;x</th>
+            <th>eˣ</th>
+            <th>aˣ</th>
+            <th>ln(x)</th>
+            <th>sin(x)</th>
+            <th>cos(x)</th>    
+            <th>tg(x)</th> 
+            <th>ctg(x)</th>                                
+            <th>arcsin(x)</th>
+            <th>arccos(x)</th>                        
+            <th>arctg(x)</th>                        
+            <th>arcctg(x)</th>
+            <th>
+            <math>
+                <msqrt>
+                <mrow>
+                    <mi>x²</mi>
+                    <mo>+</mo>
+                    <mi>a²</mi>
+                </mrow>
+                </msqrt>
+            </math>
+            </th>
+            <th>
+            <math>
+                <msqrt>
+                <mrow>
+                    <mi>x²</mi>
+                    <mo>-</mo>
+                    <mi>a²</mi>
+                </mrow>
+                </msqrt>
+            </math>
+            </th>
+            <th>
+            <math>
+                <msqrt>
+                <mrow>
+                    <mi>a²</mi>
+                    <mo>-</mo>
+                    <mi>x²</mi>
+                </mrow>
+                </msqrt>
+            </math>
+            </th>                                                                   
+        </tr>
+        <tr>
+            <td>f'(x)</td>
+            <td>0</td>
+            <td>
+            <math>
+                <msup>
+                <mi>nx</mi>
+                <mrow>
+                    <mi>n</mi>
+                    <mo>-</mo>
+                    <mn>1</mn>
+                </mrow>
+                </msup>
+            </math>
+            </td>
+            <td>
+            <math>
+                <mfrac>
+                <mn>1</mn>
+                <mrow>
+                    <mn>2</mn>
+                    <msqrt>
+                    <mi>x</mi>
+                    </msqrt>
+                </mrow>
+                </mfrac>
+            </math>
+            </td>
+            <td>
+            <math>
+                <mo>-</mo>
+                <mrow>
+                <mfrac>
+                    <mn>1</mn>
+                    <msup>
+                    <mi>x</mi>
+                    <mn>2</mn>
+                    </msup>
+                </mfrac>
+                </mrow>
+            </math>
+            </td>
+            <td>eˣ</td>
+            <td>aˣln(a)</td>
+            <td>
+            <math>
+                <mfrac>
+                <mn>1</mn>
+                <mi>x</mi>
+                </mfrac>
+            </math>
+            </td>
+            <td>cos(x)</td>
+            <td>-sin(x)</td>
+            <td>
+            <math>
+                <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                    <msup>
+                        <mi>cos</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    </mrow>
+                </mfrac>
+                </math>                                             
+            </td>
+            <td>
+            <math>
+                <mo>-</mo>
+                <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                    <msup>
+                        <mi>sin</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>(</mo>
+                    <mi>x</mi>
+                    <mo>)</mo>
+                    </mrow>
+                </mfrac>
+                </math>                  
+            </td>
+            <td>
+            <math>
+                <mfrac>
+                    <mn>1</mn>
+                    <msqrt>
+                    <mrow>
+                        <mn>1</mn>
+                        <mo>-</mo>
+                        <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                        </msup>
+                    </mrow>
+                    </msqrt>
+                </mfrac>
+            </math>                  
+            </td>
+            <td>
+            <math>
+                <mo>-</mo>
+                <mfrac>
+                    <mn>1</mn>
+                    <msqrt>
+                    <mrow>
+                        <mn>1</mn>
+                        <mo>-</mo>
+                        <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                        </msup>
+                    </mrow>
+                    </msqrt>
+                </mfrac>
+                </math>                  
+            </td>
+            <td>
+            <math>
+                <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                    <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                    </mrow>
+                </mfrac>
+            </math>                  
+            </td>
+            <td>
+            <math>
+                <mo>-</mo>
+                <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                    <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                    </mrow>
+                </mfrac>
+            </math>   
+            </td>
+            <td>
+            <math>
+                <mfrac>
+                    <mi>x</mi>
+                    <msqrt>
+                    <mrow>
+                        <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                        </msup>
+                        <mo>+</mo>
+                        <msup>
+                        <mi>a</mi>
+                        <mn>2</mn>
+                        </msup>
+                    </mrow>
+                    </msqrt>
+                </mfrac>
+                </math>                  
+            </td>
+            <td>
+                <math>
+                    <mfrac>
+                    <mi>x</mi>
+                    <msqrt>
+                    <mrow>
+                        <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <msup>
+                        <mi>a</mi>
+                        <mn>2</mn>
+                        </msup>
+                    </mrow>
+                    </msqrt>
+                    </mfrac>
+                </math>
+            </td>
+            <td>
+            <math>
+                <mo>-</mo>
+                <mfrac>
+                    <mi>x</mi>
+                    <msqrt>
+                    <mrow>
+                        <msup>
+                        <mi>a</mi>
+                        <mn>2</mn>
+                        </msup>
+                        <mo>-</mo>
+                        <msup>
+                        <mi>x</mi>
+                        <mn>2</mn>
+                        </msup>
+                    </mrow>
+                    </msqrt>
+                </mfrac>
+                </math>
+                
+            </td>
+        </tr>
+    </table> 
+    </section>
+<h3>Operații cu Derivate</h3>
+<p class="italics">
+-f'+ g'=(f+g)'. <br><br>
+-(af')=a(f').<br><br>
+-(fg)'=f'g+fg'.<br><br>
+-<math>
+    <msup>
+        <mfrac>
+        <mi>f</mi>
+        <mi>g</mi>
+        </mfrac>
+        <mo>'</mo>
+    </msup>
+    <mo>=</mo>
+    <mfrac>
+        <mrow>
+            <mrow>
+            <msup>
+                <mi>f</mi>
+                <mo>'</mo>
+            </msup>
+            <mi>g</mi>
+            <mo>-</mo>
+            <mi>f</mi>
+            <msup>
+                <mi>g</mi>
+                <mo>'</mo>
+            </msup>
+            </mrow>
+        </mrow>
+        <msup>
+            <mi>g</mi>
+            <mn>2</mn>
+        </msup>
+        </mfrac>
+    </math>
+    .<br><br>
+    -((g &#x2218; f)(x))'=(g(f(x)))'=g'(f(x))⋅f'(x).
+</p>
+<h2 class = "important"> Integrale </h2>
+<p class = "italics">
+    Definiție: Integrala unei funcții este o generalizare a noțiunilor de arie, masă, volum și sumă. În mod intuitiv, integrala unei funcții continue, pozitive, f(x), de variabilă reală și luând valori reale între două puncte a și b, reprezintă valoarea ariei mărginite de segmentele x=a, x=b, axa x și graficul funcției f(x).
+<h3> Tabel Integrale (Nedefinite)</h3>
+<table>
+    <tr>
+        <th>x</th>
+        <th>c</th>
+        <th>xⁿ</th>
+        <th>
+            <math>
+                <mfrac>
+                  <mi>x</mi>
+                  <mrow>
+                    <mi>a</mi>
+                    <mi>x</mi>
+                    <mo>+</mo>
+                    <mi>b</mi>
+                  </mrow>
+                </mfrac>
+              </math>              
+        </th>
+        <th>1&#x2044;x</th>
+        <th>eˣ</th>
+        <th>aˣ</th>
+        <th>sin(x)</th>
+        <th>cos(x)</th>    
+        <th>tg(x)</th> 
+        <th>ctg(x)</th>                                
+        <th>
+            <math>
+                <mfrac>
+                    <mn style="font-weight: bold;">1</mn>
+                    <mrow>
+                    <msup>
+                        <mi style="font-weight: bold;">cos</mi>
+                        <mn style="font-weight: bold;">2</mn>
+                    </msup>
+                    <mo>(</mo>
+                    <mi style="font-weight: bold;">x</mi>
+                    <mo>)</mo>
+                    </mrow>
+                </mfrac>
+            </math>   
+        </th>
+        <th>
+            <math>
+                <mfrac>
+                    <mn style="font-weight: bold;">1</mn>
+                    <mrow>
+                    <msup>
+                        <mi style="font-weight: bold;">sin</mi>
+                        <mn style="font-weight: bold;">2</mn>
+                    </msup>
+                    <mo>(</mo>
+                    <mi style="font-weight: bold;">x</mi>
+                    <mo>)</mo>
+                    </mrow>
+                </mfrac>
+            </math>  
+        </th>                        
+        <th>
+            <math>
+                <mfrac>
+                <mi style="font-weight: bold;">x</mi>
+                <msqrt>
+                <mrow>
+                    <msup>
+                    <mi style="font-weight: bold;">x</mi>
+                    <mn style="font-weight: bold;">2</mn>
+                    </msup>
+                    <mo>+</mo>
+                    <msup>
+                    <mi style="font-weight: bold;">a</mi>
+                    <mn style="font-weight: bold;">2</mn>
+                    </msup>
+                </mrow>
+                </msqrt>
+                </mfrac>
+            </math>
+        </th>                        
+        <th>
+            <math>
+                <mfrac>
+                <mi style="font-weight: bold;">x</mi>
+                <msqrt>
+                <mrow>
+                    <msup>
+                    <mi style="font-weight: bold;">x</mi>
+                    <mn style="font-weight: bold;">2</mn>
+                    </msup>
+                    <mo>-</mo>
+                    <msup>
+                    <mi style="font-weight: bold;">a</mi>
+                    <mn style="font-weight: bold;">2</mn>
+                    </msup>
+                </mrow>
+                </msqrt>
+                </mfrac>
+            </math>
+        </th>
+        <th>
+            <math>
+                <mfrac>
+                <mi style="font-weight: bold;">x</mi>
+                <msqrt>
+                <mrow>
+                    <msup>
+                    <mi style="font-weight: bold;">a</mi>
+                    <mn style="font-weight: bold;">2</mn>
+                    </msup>
+                    <mo>-</mo>
+                    <msup>
+                    <mi style="font-weight: bold;">x</mi>
+                    <mn style="font-weight: bold;">2</mn>
+                    </msup>
+                </mrow>
+                </msqrt>
+                </mfrac>
+            </math>
+        </th>                                                                
+    </tr>
+    <tr>
+        <td>
+            <math>
+                <mo>&#x222B;</mo>
+                <mi>x</mi>
+                <mi>d</mi>
+                <mi>x</mi>
+              </math>              
+        </td>
+        <td>
+            <math>
+                <mrow>
+                  <mi>c</mi>
+                  <mo>&#8290;</mo>
+                  <mi>x</mi>
+                </mrow>
+              </math>              
+        </td>
+        <td>
+            <math>
+                <mfrac>
+                  <msup>
+                    <mi>x</mi>
+                    <mrow>
+                      <mi>n</mi>
+                      <mo>+</mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                  <mrow>
+                    <mi>n</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+            </math>              
+        </td>
+        <td>
+            <math>
+                <mrow>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mi>a</mi>
+                  </mfrac>
+                  <mo>&#8290;</mo>
+                  <mi>ln</mi>
+                  <mo>&#8288;</mo>
+                  <mo stretchy="false">|</mo>
+                  <mrow>
+                    <mi>a</mi>
+                    <mi>x</mi>
+                    <mo>+</mo>
+                    <mi>b</mi>
+                  </mrow>
+                  <mo stretchy="false">|</mo>
+                </mrow>
+            </math>              
+        </td>
+        <td>
+            <math>
+                <mi>ln</mi>
+                <mo>&#x2061;</mo>
+                <mo>|</mo>
+                <mi>x</mi>
+                <mo>|</mo>
+                <mo>+</mo>
+                <mi></mi>
+            </math>              
+        </td>
+        <td>
+            <math>
+                <msup>
+                  <mi>e</mi>
+                  <mi>x</mi>
+                </msup>
+            </math>              
+        </td>
+        <td>
+            <math>
+                <mrow>
+                  <mfrac>
+                    <msup>
+                      <mi>a</mi>
+                      <mi>x</mi>
+                    </msup>
+                    <mrow>
+                      <mi>ln</mi>
+                      <mo>&#x2061;</mo>
+                      <mi>a</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+            </math>                                              
+        </td>
+        <td>
+            <math>
+                <mo>-</mo>
+                <mi>cos</mi>
+                <mo>&#x2061;</mo>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>)</mo>
+            </math>              
+        </td>
+        <td>
+            <math>
+                <mo></mo>
+                <mi>sin</mi>
+                <mo>&#x2061;</mo>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>)</mo>
+            </math>     
+        </td>
+        <td>
+            <math>
+                <mo>-</mo>
+                <mi>ln</mi>
+                <mo>&#x2061;</mo>
+                <mo>|</mo>
+                <mi>cos</mi>
+                <mo>&#x2061;</mo>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>)</mo>
+                <mo>|</mo>
+            </math>                                               
+        </td>
+        <td>
+            <math>
+                <mi>ln</mi>
+                <mo>&#x2061;</mo>
+                <mo>|</mo>
+                <mi>sin</mi>
+                <mo>&#x2061;</mo>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>)</mo>
+                <mo>|</mo>
+            </math>                  
+        </td>
+        <td>
+            <math>
+                <mi>tg</mi>
+                <mo>&#x2061;</mo>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>)</mo>
+            </math>                             
+        </td>
+        <td>
+        <math>
+            <mo>-</mo>
+            <mi>ctg</mi>
+            <mo>&#x2061;</mo>
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+            </math>                  
+        </td>
+        <td>
+            <math>
+                <msqrt>
+                <mrow>
+                    <mi>x²</mi>
+                    <mo>+</mo>
+                    <mi>a²</mi>
+                </mrow>
+                </msqrt>
+            </math>                
+        </td>
+        <td>
+            <math>
+                <msqrt>
+                <mrow>
+                    <mi>x²</mi>
+                    <mo>-</mo>
+                    <mi>a²</mi>
+                </mrow>
+                </msqrt>
+            </math>   
+        </td>
+        <td>
+            <math>
+                <mo>-</mo>
+                <msqrt>
+                <mrow>
+                    <mi>a²</mi>
+                    <mo>-</mo>
+                    <mi>x²</mi>
+                </mrow>
+                </msqrt>
+            </math>                   
+        </td>
+    </tr>
+    </table> 
+</section>
+<h3>Operații cu Integrale</h3>
+<p class="italics">
+<math>
+  <mrow>
+    <mo>&#x222B;</mo>
+    <mrow>
+      <mi>f</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </mrow>
+    <mi>d</mi>
+    <mi>x</mi>
+    <mo>=</mo>
+    <mo>[</mo>
+    <mi>F</mi>
+    <mo>(</mo>
+    <mi>b</mi>
+    <mo>)</mo>
+    <mo>-</mo>
+    <mi>F</mi>
+    <mo>(</mo>
+    <mi>a</mi>
+    <mo>)</mo>
+    <mo>]</mo>
+  </mrow>
+</math>
+<br><br>
+-(af')=a(f').<br><br>
+-(fg)'=f'g+fg'.<br><br>
+-<math>
+<msup>
+    <mfrac>
+    <mi>f</mi>
+    <mi>g</mi>
+    </mfrac>
+    <mo>'</mo>
+</msup>
+<mo>=</mo>
+<mfrac>
+    <mrow>
+        <mrow>
+        <msup>
+            <mi>f</mi>
+            <mo>'</mo>
+        </msup>
+        <mi>g</mi>
+        <mo>-</mo>
+        <mi>f</mi>
+        <msup>
+            <mi>g</mi>
+            <mo>'</mo>
+        </msup>
+        </mrow>
+    </mrow>
+    <msup>
+        <mi>g</mi>
+        <mn>2</mn>
+    </msup>
+    </mfrac>
+</math>
+.<br><br>
+-((g &#x2218; f)(x))'=(g(f(x)))'=g'(f(x))⋅f'(x).
+</p>
+</body>
+</html>

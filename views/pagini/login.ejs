@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link href="/stil.css" type="text/css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="meniu">
+                <li><a href="/main">Acasă</a></li>
+                <li><a href="#lectii">Lecții</a>
+                    <ul class="submeniu">
+                        <li><a href="legi.html">Legi de Compoziție</a></li>
+                        <!--<li><a href="polinoame.html">Polinoame</a></li> -->
+                        <li><a href="geometrie.html">Geometrie</a></li>
+                        <li><a href="trigonometrie.html">Trigonometrie</a></li>
+                        <li><a href="derivate.html">Derivate & Integrale</a></li>
+                    </ul>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="quiz.html">Teste</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <form id="loginForm" class="form" action="login" method="post">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <form id="registerForm" class="form" action="register" method="POST">
+            <h2>Register</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

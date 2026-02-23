@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="stil.css" type="text/css" rel="stylesheet"> 
+    <script src="calculator.js"></script>
+</head>
+<body>
+    <article>
+        <section>
+            <nav>
+                <ul class="meniu">
+                    <li><a href="main.html">Acasă</a></li>
+                    <li><a href="#lectii">Lecții</a>
+                        <ul class="submeniu">
+                            <li><a href="legi.html">Legi de Compoziție</a></li>
+                            <!--<li><a href="polinoame.html">Polinoame</a></li> -->
+                            <li><a href="geometrie.html">Geometrie</a></li>
+                            <li><a href="trigonometrie.html">Trigonometrie</a></li>
+                            <li><a href="derivate.html">Derivate & Integrale</a></li>
+                        </ul>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="quiz.html">Teste</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div class="calculator-container">
+            <div class="calculator-box">
+                <h3>Calculator</h3>
+                <form>
+                    <label>
+                        Termen 1:
+                        <input type="text" value="0">
+                    </label>
+                    <label>
+                        Termen 2:
+                        <input type="text" value="0">
+                    </label>
+                    <label>
+                        Operația:
+                        <select>
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="⋅">⋅</option>
+                            <option value="/">/</option>
+                            <option value="%">%</option>
+                            <option value="^">^</option>
+                        </select>
+                    </label>
+                    <input type="submit" value="Calculează">
+                </form>
+
+                <div class="output-box" id="output-box">Rezultat:</div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
