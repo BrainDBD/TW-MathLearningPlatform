@@ -109,4 +109,4 @@ Open your browser at **http://localhost:3000**.
 
 ## License
 
-This project was built for educational purposes. Feel free to expand it.
+This project falls under the MIT License.
